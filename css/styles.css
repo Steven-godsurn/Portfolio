@@ -1,10 +1,12 @@
 html, body{
   min-height: 100vh;
   scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body{
-    display: grid;
+    display: block;
     margin: 0;
     background: linear-gradient(#1b363b, #225661, #0d333b);
     background-size: 100%;
@@ -12,14 +14,18 @@ body{
     min-height: 100vh;
 }
 
-.fixed-top{
+.navbar{
     background: linear-gradient(#1a525e, #214247, #132f33);
+    width: 100%;
+    left: 0;
+    right: 0;
+
 }
 .navbar-brand{
  font-size: 1.5em; 
  font-weight: 600; 
  color:#f9f2f2;
- padding-left: 1em;
+ padding-left: 2em;
 }
 .navbar-nav{
     padding-bottom: 0.1rem;
@@ -99,8 +105,8 @@ h2{
 }
 
 /* icons styling */
-#row-icon{
-    margin: auto;
+.icon-wrapper{
+   padding-left: 5px; 
 }
 i{
 font-size: 2rem;
@@ -403,10 +409,10 @@ img{
         gap: 1rem
     }
   section {
-        min-width: unset;
-        width: 100%;
-        margin: 2rem auto;
-        height: auto;
+         width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
  .skill-icons img {
@@ -423,14 +429,13 @@ img{
 .image-div {
         flex-direction: column;      
         align-items: center;
-        padding: 0 1rem;
+        padding: 1rem;
         height: 50em;
         gap: 2rem; 
         flex-wrap: wrap;
         justify-content: center;
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
+        width: 100%;
+        margin: 2rem auto;
         border-radius: 8px;
     }
 .image-div img{
@@ -442,18 +447,31 @@ img{
         text-align: center;
         flex-shrink: 0;
     }
-    
+   
+   .navbar-brand{
+    font-size: 1em; 
+    font-weight: 400;
+    padding-left: 1em;
+   } 
 
     #side-bar {
-        position: static;
+        position: relative;   
         width: 100%;
-        height: auto;
         min-height: auto;
+        height: auto;
         background: transparent;
-        display: flex;
+        flex-direction: row;  
         justify-content: center;
+        padding: 1rem 0;
+        top: auto;
+        left: auto;
     }
-
+    .icon-wrapper{
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        width: 100%;
+}
 }
 @media (max-width: 1023px){
     .skill-icons {
