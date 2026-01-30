@@ -390,7 +390,7 @@ img{
         font-size: 18px;
         position: relative;
         top: -10em;
-        right: -20em
+        right: -18em
     }
 
 .front-end, .back-end{
@@ -453,7 +453,16 @@ img{
     font-weight: 400;
     padding-left: 1em;
    } 
+.navbar-nav {
+        padding-left: 0 !important;   
+        margin: 0 auto;              
+        text-align: center;           
+        width: 100%;
+    }
 
+    .nav-item {
+        margin: 0.5rem 0;       
+    }
     #side-bar {
         position: relative;   
         width: 100%;
