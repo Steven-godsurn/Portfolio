@@ -22,17 +22,20 @@ body{
 
 }
 .navbar-brand{
+ position: relative;   
  font-size: 1.5em; 
  font-weight: 600; 
  color:#f9f2f2;
- padding-left: 2em;
-}
-.navbar-nav{
-    padding-bottom: 0.1rem;
-    padding-left: 2rem;
-    text-align: center;
-    padding-left: 60em;
+ margin-left: 5vw;
 
+}
+.navbar-nav {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 2rem;               
+    margin: 0;
+    padding: 0;
 }
 .nav-link{
    font-size: 1rem; 
@@ -51,15 +54,16 @@ li.hidden{
 
 /*reception*/
 #reception{
-    color: #f9f2f2;
     position: relative;
-    top: -5%;
-    left: -4%;
-    transform: translate(5%);
+    top: 2vw;
+    margin-left: 5vw;
+    color: #f9f2f2;
 }
+
 h1{
     font-size: 50px;
 }
+
 h2{
     font-style:italic;
     color:aquamarine;
@@ -88,10 +92,9 @@ h2{
 
 /*salute*/
 #salute{
-    position: absolute;
-    top: 36%;
-    left: 86%;
-    padding-left: 5px;
+    position: relative;
+    top: -5vw;
+    left: 80vw;
 }
    
 /*side bars*/
@@ -371,7 +374,6 @@ img{
     }
   
     /* Stop absolute offsets */
-    .emoji,
     #salute {
         position: static;
         transform: none;
@@ -458,6 +460,7 @@ img{
         margin: 0 auto;              
         text-align: center;           
         width: 100%;
+        gap: -1rem;
     }
 
     .nav-item {
