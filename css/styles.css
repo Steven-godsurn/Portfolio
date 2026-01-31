@@ -26,7 +26,7 @@ body{
  font-size: 1.5em; 
  font-weight: 600; 
  color:#f9f2f2;
- margin-left: calc(75px + 1rem);
+ margin-left: calc(75px + -1rem);
 
 }
 .navbar-nav {
@@ -56,7 +56,7 @@ li.hidden{
 #reception{
     position: relative;
     top: 2vw;
-    margin-left: calc(75px + 1rem);
+    margin-left: calc(75px + -1rem);
     color: #f9f2f2;
 }
 
@@ -94,7 +94,7 @@ h2{
 #salute{
     position: absolute;
     top: 40vh;
-    right: 2rem;
+    right: 10rem;
 }
    
 /*side bars*/
@@ -372,12 +372,13 @@ img{
         width: 100%;
         overflow-x: hidden;      
     }
-  
+  #salute{
+    position: relative;
+    top: 2vh;
+    left: 12.3vw
+ 
+  }
     /* Stop absolute offsets */
-    #salute {
-        left: 22vw !important; 
-    }
-    
     .container-sm h1{
         font-size: 20px;
         position: static;
