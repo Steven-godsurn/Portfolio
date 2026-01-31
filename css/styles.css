@@ -378,7 +378,6 @@ img{
         position: static;
         transform: none;
         margin: 0.5rem auto;
-        left: auto;
         transform: none;
     }
     .container-sm h1{
@@ -460,7 +459,7 @@ img{
         margin: 0 auto;              
         text-align: center;           
         width: 100%;
-        gap: -1rem;
+        gap: 0px;
     }
 
     .nav-item {
