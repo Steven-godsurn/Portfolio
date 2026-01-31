@@ -375,11 +375,10 @@ img{
   
     /* Stop absolute offsets */
     #salute {
-        position: static;
-        transform: none;
-        margin: 0.5rem auto;
+        left: 80vw;
         transform: none;
     }
+    
     .container-sm h1{
         font-size: 20px;
         position: static;
