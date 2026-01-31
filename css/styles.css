@@ -26,7 +26,7 @@ body{
  font-size: 1.5em; 
  font-weight: 600; 
  color:#f9f2f2;
- margin-left: 5vw;
+ margin-left: calc(75px + 1rem);
 
 }
 .navbar-nav {
@@ -56,7 +56,7 @@ li.hidden{
 #reception{
     position: relative;
     top: 2vw;
-    margin-left: 5vw;
+    margin-left: calc(75px + 1rem);
     color: #f9f2f2;
 }
 
@@ -92,9 +92,9 @@ h2{
 
 /*salute*/
 #salute{
-    position: relative;
-    top: -5vw;
-    left: 80vw;
+    position: absolute;
+    top: 40vh;
+    right: 2rem;
 }
    
 /*side bars*/
@@ -375,8 +375,7 @@ img{
   
     /* Stop absolute offsets */
     #salute {
-        left: 80vw;
-        transform: none;
+        left: 22vw !important; 
     }
     
     .container-sm h1{
@@ -451,7 +450,7 @@ img{
    .navbar-brand{
     font-size: 1em; 
     font-weight: 400;
-    padding-left: 1em;
+    padding-left: 0.7em;
    } 
 .navbar-nav {
         padding-left: 0 !important;   
