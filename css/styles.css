@@ -13,7 +13,17 @@ body{
     background-repeat: repeat;
     min-height: 100vh;
 }
-
+body::before {
+    content: "";
+    position: fixed;
+    inset: -18%;
+    background-image:  url("https://media.istockphoto.com/id/896259332/photo/cup-of-black-tea-served-with-biscuits.jpg?s=612x612&w=0&k=20&c=-jZldFHwnpEC__qQboWtD4UCjW6fjZLUDAC4v8MbhqM=");
+    background-size: cover;
+    background-position: center;
+    transform: rotate(5deg);
+    z-index: -1;
+    opacity: 0.35;
+}
 .navbar{
     background: linear-gradient(#1a525e, #214247, #132f33);
     width: 100%;
@@ -37,6 +47,7 @@ body{
     margin: 0;
     padding: 0;
 }
+
 .nav-link{
    font-size: 1rem; 
    font-weight: 400;
@@ -53,85 +64,52 @@ li.hidden{
 }
 
 /*reception*/
+.name-div{
+    max-width: 500px;      
+    margin: 2rem, 0;      
+    padding: 16px;
+    padding-bottom: 0;
+}
+
+.name-div h1{
+    color: #fff;
+}
+.name-div p{
+    margin-bottom: 1px;
+    font-style: italic;
+    font-size: larger;
+}
+li span{
+    font-weight: bold;
+}
 #reception{
-    position: relative;
-    top: 2vw;
-    margin-left: calc(75px + -1rem);
+    margin: 5rem auto;
     color: #f9f2f2;
+    padding: 16px; 
+    max-width: 700px;
 }
 
-h1{
-    font-size: 50px;
+.about-me{
+  padding: 16px;         
+  line-height: 1.6;        
+  border-radius: 8px; 
+  margin-bottom: -1rem;
+  font-size: 1rem;
+}
+.about-project ul {
+    list-style-type: disc;
 }
 
-h2{
-    font-style:italic;
-    color:aquamarine;
-}
-
-@keyframes waving-hand {
-
-0% {transform: rotate(0deg);
-}
-10% {transform: rotate(8deg);
-}
-20% {transform: rotate(-4deg);
-}
-30% {transform: rotate(14deg);
-}
-40% {transform: rotate(-4.0deg);
-}
-50% {transform: rotate(8deg);
-}
-60% {transform: rotate(14deg);
-}
-100% {transform: rotate(0deg);
-}
-
-}
-
-/*salute*/
-#salute{
-    position: absolute;
-    top: 40vh;
-    right: 10rem;
-}
-   
-/*side bars*/
-#side-bar{
-    width: 75px;
-    min-height: 100vh;
-    background: linear-gradient(#21363a, #1c4c53, #326e77);
-    position: fixed;
-    left: 0;
-    top:0;
+.about-project li {
+    color: #fff;
 }
 
 /* icons styling */
-.icon-wrapper{
-   padding-left: 5px; 
-}
 i{
 font-size: 2rem;
 margin-top: 2rem;
 }
 
-#facebook{
-    color: rgb(67, 67, 204);
-    background-color: #f9f2f2;
-    border-radius: 15%;
-}
-#tiktok,
-#twitter {
-    color: #f9f2f2;
-    background-color: black;
-    border-radius: 15%;
-}
-#ig{
-    color: #f9f2f2;
-    background: linear-gradient(rgb(122, 21, 21), #7c2222, #fa053e, #be123a) ;
-    border-radius: 15%;
-}
 #linkedin{
     color:#f9f2f2;
     background-color: blue;
@@ -234,13 +212,12 @@ section {
 .image-div{
     position: relative;
     background-color: rgba(19, 47, 51, 0.7);
-    height: 20rem;
+    height: auto;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    padding-left: 10rem;
+    padding: 2rem 1rem;
     margin-top: 9.5rem;
-    gap: 5rem;
+    gap: 2rem;
 }
 
 .profile-photo {
@@ -249,6 +226,12 @@ section {
     flex-shrink: 0;
 }
 
+.specialize-in-div{
+  position: relative;  
+  display: flex;
+  flex-wrap: wrap;          
+  gap: 0.75rem;
+}
 .specialize-in{
     font-size: 1.5rem;
     font-family: "Akaya Telivigala", system-ui;
@@ -256,6 +239,25 @@ section {
     text-decoration-line: underline;
     text-decoration-color: rgb(180, 128, 230);
 
+}
+.tab-button {
+    display: inline-block;        /* button shrinks/grows with content */
+    padding: 0.5rem 1.5rem;      /* vertical and horizontal padding */
+    font-size: 1rem;             /* adjust text size */
+    font-weight: 500;
+    border-radius: 25px;         /* rounded like a tab */
+    border: 2px solid #24c7c7;  /* border color like a tab */
+    background-color: transparent; 
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;          /* prevent text wrapping */
+}
+
+.tab-button:hover {
+    background-color: #24c7c7;  /* hover fill */
+    color: #000;                 /* text color on hover */
+    transform: scale(1.05);      /* subtle grow effect */
 }
 
 p{
@@ -269,6 +271,7 @@ p{
     flex-direction: column;
     align-items: center;
     border: none;
+    margin-left: 5em;
     border-radius: 3rem;
     width: 11em;
     height: 10em;
@@ -290,16 +293,19 @@ p{
 
  transition: transform 0.6s ease, opacity 0.6s ease;;
 }
+
 .hobby-div:hover p span:nth-child(1) {
     opacity: 1;
     transform: translateX(18px);
     transition-delay: 0s;
 }
+
 .hobby-div:hover p span:nth-child(2) {
     opacity: 1;
     transform: translateX(18px);
     transition-delay: 0.1s;
 }
+
 .hobby-div:hover p span:nth-child(3) {
     opacity: 1;
     transform: translateX(18px);
@@ -307,24 +313,40 @@ p{
 }
 
 .projectDiv h1{
-    display: flex;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff
+    color: #fff;
 }
 
-.projectDiv{
+.projectDiv {
     display: flex;
-    width: 85%;
-    height: 20rem;
-    margin: 2em auto;
-    background: linear-gradient(55deg, #5451753f, #326e7771, #21363a);
-    border-radius: 10px;
-    
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    min-height: auto;
+    background: linear-gradient(55deg, rgb(54, 30, 33), rgb(68, 16, 38));
+
+    margin-top: 1rem;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+
+
+    background: linear-gradient(55deg, #092125, rgb(36, 10, 20));
+    border-radius: 10px;    
 }
-.projects{
+
+.projectDiv h1 {
+    flex-basis: 100%;     
+    width: 100%;
+    text-align: center;    
+    justify-content: center;
+    margin: 0;
+    margin-top: 2rem; 
+
+}
+
+
+
+.projects1, .projects2{
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -333,16 +355,24 @@ p{
     border-radius: 3rem;
     width: 11em;
     height: 10em;
-    margin: 5rem 5rem;
-    background-image: linear-gradient(40deg,#8570704b, #3b9aada8), url(https://images.emojiterra.com/google/noto-emoji/unicode-15.1/color/512px/1f528.png);
+    margin: 2rem 2rem;
+    background-image: linear-gradient(40deg,#8570704b, #3b9aada8);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
 }
- .projects:hover{
+.projects1{
+    background-image: linear-gradient(40deg,#8570704b, #3b9aada8), url(https://images.emojiterra.com/google/noto-emoji/unicode-15.1/color/512px/1f528.png);
+  
+}
+.projects:hover{
     width: 12em;
     height: 11em;
+ }
+ .projectApp{
+    display: flex;
+    justify-content: center;
  }
 img{
   width: 60px;
@@ -363,6 +393,7 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 2rem;
 }
 
 /* media queries */
@@ -372,11 +403,7 @@ img{
         width: 100%;
         overflow-x: hidden;      
     }
-  #salute{
-    position: relative;
-    top: 2vh;
-    margin-left: calc(15.2rem + -1rem) !important;
-  }
+  
     /* Stop absolute offsets */
     .container-sm h1{
         font-size: 20px;
@@ -463,24 +490,7 @@ img{
     .nav-item {
         margin: 0.5rem 0;       
     }
-    #side-bar {
-        position: relative;   
-        width: 100%;
-        min-height: auto;
-        height: auto;
-        background: transparent;
-        flex-direction: row;  
-        justify-content: center;
-        padding: 1rem 0;
-        top: auto;
-        left: auto;
-    }
-    .icon-wrapper{
-        display: flex;
-        gap: 2rem;
-        justify-content: center;
-        width: 100%;
-}
+
 }
 @media (max-width: 1023px){
     .skill-icons {

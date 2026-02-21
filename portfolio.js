@@ -1,4 +1,6 @@
 const project = document.getElementById("first-project");
+const project2 = document.getElementById("second-project");
+
 const contactInfo = document.getElementById("contactInfo");
 const contactBtn = document.getElementById("contactBtn");
 const gitHub = document.getElementById("gitHub");
@@ -10,6 +12,10 @@ contactBtn.addEventListener("click", () => {
 
 project.addEventListener("click", () => {
       window.open("https://steven-godsurn.github.io/Handihand/", "_blank");
+})
+
+project2.addEventListener("click", () => {
+      window.open("https://steven-godsurn.github.io/Chatbox/", "_blank");
 })
 
 gitHub.addEventListener("click", () => {
