@@ -6,6 +6,9 @@ const contactBtn = document.getElementById("contactBtn");
 const gitHub = document.getElementById("gitHub");
 const linkedIn = document.getElementById("linkedIn");
 
+const buttons = document.querySelectorAll(".tab-button");
+const descriptions = document.querySelectorAll(".skill-description");
+
 contactBtn.addEventListener("click", () => {
    contactInfo.classList.toggle("d-none");
 })
@@ -25,3 +28,22 @@ gitHub.addEventListener("click", () => {
 linkedIn.addEventListener("click", () => {
     window.location.href = "https://www.linkedin.com/feed/";
 })
+
+buttons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+       const description = button.parentElement.querySelector(".skill-description");
+
+      if(description.classList.contains("show")){
+          description.classList.remove("show");
+      }else {
+        descriptions.forEach(item => {
+          item.classList.remove("show");  
+        })
+        description.classList.add("show");
+
+      }
+    });
+
+});
